@@ -1,11 +1,11 @@
 let tasks = [
-  
+
 ];
 
-function getTasksFromStorage(){
+function getTasksFromStorage() {
   let retrievedTasks = JSON.parse(localStorage.getItem("tasks"))
   tasks = retrievedTasks ?? []
-  
+
 }
 getTasksFromStorage()
 
@@ -16,7 +16,9 @@ function fillTasks() {
     let content = `
                     <div class="task ${task.isDone ? 'done' : ''}">
                         <div id="task-info">
-                            <h3 style="display: inline; ">${task.title}</h3>
+                            <div id="taskTitle">
+                            <h3 style="display: inline;">${task.title}</h3>
+                            </div>
                               <div id="dates">
                                 <span class="material-symbols-outlined">
                                     calendar_month
@@ -27,44 +29,44 @@ function fillTasks() {
                               </div>
                         </div>
                             <div id="task-btn">
-                              ${task.isDone ? 
-                                  ``
-                                  
-                                  : 
+                              ${task.isDone ?
+        ``
 
-                                  `<button onclick="editTask(${index})" id="edit-btn" class="unit">
+        :
+
+        `<button onclick="editTask(${index})" id="edit-btn" class="unit">
                                     <span class="material-symbols-outlined">
                                       edit
                                     </span>
                                   </button>
                                   `
-                                }
+      }
                               
-                              ${task.isDone ? 
-                              
-                                `
+                              ${task.isDone ?
+
+        `
                                 <button onclick="toggleTaskCompletion(${index})" id="check-btn" class="unit" style="background-color: #b73239; color: white;   box-shadow: none;">
                                     <span class="material-symbols-outlined">
                                       cancel
                                     </span>
                                 </button>
                               `
-                              
-                              :
-                              
-                              ` <button onclick="toggleTaskCompletion(${index})"
+
+        :
+
+        ` <button onclick="toggleTaskCompletion(${index})"
                                   id="check-btn" class="unit">
                                     <span class="material-symbols-outlined">
                                       check
                                     </span>
                                 </button>`}
                               
-                              ${task.isDone ? 
-                                ``
-                              
-                              :
+                              ${task.isDone ?
+        ``
 
-                              `<button onclick="deleteTask(${index})" id="delete-btn"  class="unit">
+        :
+
+        `<button onclick="deleteTask(${index})" id="delete-btn"  class="unit">
                                 <span class="material-symbols-outlined">
                                   delete
                                 </span></button>`}
@@ -92,9 +94,9 @@ document.getElementById("add-task").addEventListener("click", function () {
     ":" +
     now.getMinutes();
   let taskName = prompt("Please enter the task title :");
-  if (taskName == null){
+  if (taskName == null) {
     return taskName
-  }else{
+  } else {
 
     let taskObj = {
       title: taskName,
@@ -117,12 +119,12 @@ function deleteTask(index) {
   }
 }
 
-function editTask(index){
+function editTask(index) {
   let task = tasks[index];
   let newTaskTitle = prompt("Please enter the new task title :", task.title);
-  if (newTaskTitle.value == task){
+  if (newTaskTitle.value == task) {
     return task
-  }else{
+  } else {
     task.title = newTaskTitle
     storeTasks()
     fillTasks()
@@ -130,7 +132,7 @@ function editTask(index){
   }
 }
 
-function toggleTaskCompletion(index){
+function toggleTaskCompletion(index) {
   let task = tasks[index]
   task.isDone = !task.isDone
   storeTasks()
@@ -138,7 +140,13 @@ function toggleTaskCompletion(index){
 }
 
 
-function storeTasks(){
+function storeTasks() {
   let tasksToString = JSON.stringify(tasks)
-  localStorage.setItem("tasks",tasksToString)
+  localStorage.setItem("tasks", tasksToString)
 }
+
+
+
+
+
+
