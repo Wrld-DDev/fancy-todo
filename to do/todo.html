@@ -1,100 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Michroma&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0"
+    />
 
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+      rel="stylesheet"
+    />
 
-  <link rel="stylesheet" href="style.css" />
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
-  <div style="display: flex; align-items: center; justify-content: center;">
-    <!-- main container -->
-    <div id="container">
-      <!-- title and adding task btn -->
-      <div id="header">
-        <div id="title">
-          <h2 style="display: inline ; color: #b73239;">TO DO List</h2>
+  <body>
+    
+    <div style="display: flex; align-items: center; justify-content: center">
+      <!-- main container -->
+      <div id="container">
+        <!-- title and adding task btn -->
+        <div id="header">
+          <div id="title">
+            <h2 style="display: inline; color: #b73239">TO DO List</h2>
+          </div>
+          <div id="add-btn">
+            <button id="add-task">
+              <span class="material-symbols-outlined"> add </span>
+            </button>
+          </div>
         </div>
-        <div id="add-btn">
-          <button id="add-task"><span class="material-symbols-outlined">
-              add
-            </span></button>
-        </div>
-      </div>
-      <!--\\ title and adding task btn //-->
+        <!--\\ title and adding task btn //-->
 
-      <!-- tasks -->
-      <div id="tasks-container">
-        <div id="sub-container">
-          <div class="task">
-            <div id="task-info">
-              <h3 style="display: inline; ">test 1 2 3 ...</h3>
-              <div id="dates">
-                <span class="material-symbols-outlined">
-                  calendar_month
-                </span>
-                <span id="date">10/10/2022</span>
+        <!-- tasks -->
+        <div id="tasks-container">
+          <div id="sub-container">
+            <div class="task">
+              <div id="task-info">
+                <div id="taskTitle">
+                <h3 style="display: inline;">test 1 2 3 ...</h3>
               </div>
-            </div>
-            <div id="task-btn">
-              <button id="edit-btn" class="unit"><span class="material-symbols-outlined">
-                  edit
-                </span></button>
-              <button id="check-btn" class="unit"><span class="material-symbols-outlined">
-                  check
-                </span></button>
-              <button id="delete-btn" class="unit"><span class="material-symbols-outlined">
-                  delete
-                </span></button>
+                <div id="dates">
+                  <span class="material-symbols-outlined">
+                    calendar_month
+                  </span>
+                  <span id="date">10/10/2022</span>
+                </div>
+              </div>
+              <div id="task-btn">
+                <button id="edit-btn" class="unit">
+                  <span id="icone" class="material-symbols-outlined"> edit </span>
+                </button>
+                <button id="check-btn" class="unit">
+                  <span id="icone" class="material-symbols-outlined"> check </span>
+                </button>
+                <button id="delete-btn" class="unit">
+                  <span id="icone" class="material-symbols-outlined"> delete </span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-        
       </div>
-
+      <!--\\ main container //-->
     </div>
-    <!--\\ main container //-->
 
+    <!-- my signature -->
+    <footer>
+      <div class="attribution">
+        <p><i class="fa fa-code red"></i> by <span> H U S S I E N.</span></p>
+      </div>
+    </footer>
+    <!--\\ my signature //-->
 
-
-  </div>
-
-  <!-- my signature -->
-  <footer>
-    <div class="attribution">
-      <p>
-        <i class="fa fa-code red"></i> by <span> H U S S I E N.</span>
-      </p>
-    </div>
-  </footer>
-  <!--\\ my signature //-->
-
-
-
-  <script src="todo.js"></script>
-</body>
-
+    <script src="index.js"></script>
+  </body>
 </html>
